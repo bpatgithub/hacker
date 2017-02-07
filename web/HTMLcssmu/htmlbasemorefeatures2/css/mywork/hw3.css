@@ -1,0 +1,121 @@
+header{
+    background-image: url('../images/flywheel.jpg');
+    background-repeat: no-repeat;
+    background-size:auto;
+    }
+
+body{
+margin:1%;
+background: #FFFFFF;
+padding: 1px;
+width: 900px;
+}
+
+h1{
+    text-align: center;
+    color: #F2F5FF;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+nav a {
+    display: inline-block;
+    background: #F3F3F3;
+    text-align: center;
+    width: 150px;
+    padding: 10px;
+    margin: 25px;
+    opacity: 0.5;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+nav a:hover{
+  background-color:#AA99CC;
+  }
+
+.active{
+    color: #0000FF;
+    background-color: #FFFFFF;
+    opacity: 1;
+}
+
+main{
+    display: flex;
+}
+
+img{
+    width: 100px;
+    margin: 10px;
+    border: 2px solid;
+    border-color: #000000;
+}
+
+main aside {
+background: #77AA55;
+padding: 15px;
+max-width: 150px;
+}
+
+main section {
+  padding: 5px;
+}
+
+table {
+    font-size: 20px;
+    font-family: Arial, "Times New Roman", serif;
+    font-weight: lighter;
+    line-height: 20px;
+    width: 800px;
+    margin: 10px;
+    color:#06425C;
+    border-spacing: 0;
+    border: 3px solid black;
+    -webkit-border-radius: 25px 25px 0 0;
+    border-radius: 25px 25px 25px 25px;
+}
+
+table th {
+    background: linear-gradient(to right, #f6f1d3, #648880, #293f50);
+    height: 80px;
+    border-radius: 25px 25px 0px 0px;
+    border-bottom: 5px solid black;
+    color:#1a0000;
+}
+
+table td {
+    background: #e6ffe6;
+    height: 10px;
+    font-size: 17px;
+    border: 1px;
+    padding: 2px;
+    color:#4d1933;
+    border-radius: 2px;
+    text-shadow: 1px 1px #ff0000;
+}
+
+table tr th:nth-child(1) {
+    width: 500px;
+    text-align: left;
+}
+
+table tr td:nth-child(2) {
+    text-align: center;
+}
+
+table tr td:nth-child(3) {
+    text-align: center;
+}
+
+table tr, td {
+    opacity: 0.6;
+}
+
+table tr:not(:first-child):hover{
+    opacity: 1;
+}

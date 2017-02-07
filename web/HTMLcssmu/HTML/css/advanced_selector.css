@@ -1,0 +1,85 @@
+h1{
+    /*color:blue;*/
+    color:rgba(128, 0, 0, 1);
+    background: rgba(0, 64, 128, .25);
+    font-size: 150%;
+    text-align: center;
+}
+
+body {
+    background: #e6e6e6;
+    margin: 4%;
+}
+header {
+    color:rgba(255, 0, 0, 0.2);
+    text-align: center;
+    background-color: rgba(255, 0, 0, 0.5);
+    padding:1%;
+}
+
+header, footer {
+    background: gba(255, 0, 0, 0.5);
+    background: -webkit-linear-gradient(#00b7ea 0%, #dee4e8 100%);
+    background: -moz-linear-gradient(#00b7ea 0%, #dee4e8 100%);
+    background: -o-linear-gradient(#00b7ea 0%, #dee4e8 100%);
+    background: linear-gradient(#00b7ea 0%, #dee4e8 100%);
+
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px
+}
+
+nav {
+    font-variant: small-caps;
+    font-size: 150%;
+    font-family: Arial, "Times New Roman", serif;
+}
+
+nav a {
+    width: 20%;
+    display: inline-block;
+    background: #ffffff;
+}
+
+h2 {
+    color:rgba(0, 0, 255, 1);
+    font-size: 125%;
+}
+
+.half {
+    width: 20%;
+    display:inline-block;
+    margin: 2px;
+    float: left;
+}
+
+.full {
+    clear: both;
+}
+
+ul{
+    color:green;
+}
+
+section {
+    color:green;
+}
+
+details {
+    font-style: italic;
+    font-size: 110;
+}
+
+summary {
+    font-style: normal;
+}
+
+footer {
+    background-color: rgba(255, 0, 0, 0.2);
+    clear: both; # don't let anything float either side of me
+}
+
+img {
+    width:100px;
+}

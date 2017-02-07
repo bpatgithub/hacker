@@ -1,0 +1,161 @@
+10
+
+dir
+0
+https://subversion.assembla.com/svn/georgepolak/trunk/iphone_boot_camp/exercises/03.5_bonus_Clicker/NavDemo/NavDemo
+https://subversion.assembla.com/svn/georgepolak
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+f852c3c7-59c7-4749-adb4-9741c503f4f3
+
+main.m
+file
+
+
+
+add
+
+Default@2x.png
+file
+
+
+
+add
+
+
+
+
+
+has-props
+has-prop-mods
+
+MyFirstViewController.h
+file
+
+
+
+add
+
+MyFirstViewController.m
+file
+
+
+
+add
+
+en.lproj
+dir
+
+
+
+add
+
+NavDemo-Prefix.pch
+file
+
+
+
+add
+
+ViewController.xib
+file
+
+
+
+add
+
+AppDelegate.h
+file
+
+
+
+add
+
+Clicker.h
+file
+
+
+
+add
+
+ViewController.h
+file
+
+
+
+add
+
+AppDelegate.m
+file
+
+
+
+add
+
+Default.png
+file
+
+
+
+add
+
+
+
+
+
+has-props
+has-prop-mods
+
+Clicker.m
+file
+
+
+
+add
+
+Default-568h@2x.png
+file
+
+
+
+add
+
+
+
+
+
+has-props
+has-prop-mods
+
+ViewController.m
+file
+
+
+
+add
+
+NavDemo-Info.plist
+file
+
+
+
+add
+

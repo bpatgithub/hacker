@@ -1,0 +1,31 @@
+header {
+    background-color: #FFC0CB;
+}
+
+h1 {
+    color: #6A5ACD;
+    font-variant-caps: all-petite-caps;
+    text-align: center;
+}
+
+
+h2 {
+    color: #008080;
+    font-variant-caps: all-petite-caps;
+}
+
+section {
+    background-color: 	#D8BFD8;
+}
+
+nav {
+    background-color: 	#FFEFD5;
+}
+
+a {
+    color:#800080;
+}
+
+img {
+    display: none;
+}

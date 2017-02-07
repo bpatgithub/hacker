@@ -1,0 +1,21 @@
+a {
+    display:block;
+    color: #ffffff;
+    background: #0006cc;
+    width: 200px;
+    text-align: center;
+    padding: 4px;
+    text-decoration:underline;;
+    margin:0 auto;
+    margin-top: 10px
+}
+
+a:hover {
+    background: #b3b3b3;
+    color: #0006cc;
+}
+
+a:focus {
+    background: #b3b3b3;
+    color: #0006cc;
+}
