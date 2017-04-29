@@ -4,7 +4,7 @@ import xml.etree.ElementTree as ET
 serviceurl = 'http://maps.googleapis.com/maps/api/geocode/xml?'
 
 while True:
-    address = raw_input('Please enter an address: ') or "34980 Eastin Drive, Union City, CA"
+    address = raw_input('Please enter an address: ') or "1830 Bering Drive, San Jose, CA, 95112"
     if len(address) < 1: break
 
     url = serviceurl + urllib.urlencode({'sensor':'false', 'address':address})

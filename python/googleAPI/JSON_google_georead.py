@@ -1,7 +1,7 @@
 import json
 import urllib
 
-location = raw_input("Enter location: ") or "Gauhati University"
+location = raw_input("Enter location: ") or "Temple University"
 
 service_url="http://maps.googleapis.com/maps/api/geocode/json?"
 url = service_url + urllib.urlencode({'sensor':'false', 'address':location})

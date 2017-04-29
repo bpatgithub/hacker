@@ -1,6 +1,6 @@
 import urllib
 import oauth2
-import bp_twtr_hidden as btwit
+import __private_bp_twtr_hidden as btwit
 
 def auth_aug(url, parameters):
     secrets = btwit.oauth()

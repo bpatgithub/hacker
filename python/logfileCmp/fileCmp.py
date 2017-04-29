@@ -1,63 +1,72 @@
 import numpy as np
 
-tsfile = raw_input("Enter Tablo Script File Name: ") or "ts.csv"
-pwfile = raw_input("Enter PHI Web File Name: ") or "web.csv"
+def read_data():
+    tsfile = raw_input("Enter Tablo Script File Name: ") or "ts.csv"
+    pwfile = raw_input("Enter PHI Web File Name: ") or "web.csv"
 
-def get_line_col_counts(tsfile, pwfile):
+    # Numpy array
+    tsdata = np.genfromtxt(tsfile, dtype=None, delimiter=',', names=True)
+    pwdata = np.genfromtxt(pwfile, dtype=None, delimiter=',', names=True)
 
-    tslines = sum(1 for line in open(tsfile))
-    pwlines = sum(1 for line in open(pwfile))
+    tsdata.sort(order=['sequence'])
+    pwdata.sort(order=['sequence'])
 
-    fh = open(tsfile)
+    tssize = len(tsdata)
+    pwsize = len(pwdata)
 
-    for line in open(tsfile):
-        cols=len(line.split(','))
-        break
+    if tssize > pwsize:
+        max_raws=tssize
+    else:
+        max_raws=pwsize
 
-    print "cols are", cols
+    return (tsdata, pwdata, max_raws)
 
+#print "sequence is ", tsdata['sequence'], pwdata['sequence']
 
-    # fine higher line.
-    print "number of lines in Tablo Script is ", tslines
-    print "number of lines in PHI Web is ", pwlines
-
-    return(cols, tslines, pwlines)
-
-def sorted_data(tsfile, pwfile):
-    with open(tsfile) as t:
-        next(t)
-        tslines = [line.split(',') for line in t]
-    #print "ts lines are ", tslines
-
-    with open(pwfile) as p:
-        next(p)
-        pwlines = [line.split(',') for line in p]
-
-    #print "pw lines are ", pwlines
-
-    #tslines.sort(int(key=itemgetter(2)))
-    #pwlines.sort(int(key=itemgetter(2)))
-
-    tslines_s = sorted(tslines, key=lambda data_entry: int(tslines[1]))
-    pslines_s = sorted(pslines, key=lambda data_entry: int(pslines[1]))
+(tsdata, pwdata, max_raws) = read_data()
 
 
-    return(tslines, pwlines)
+tsseq = []
+for data in tsdata:
+    #print data
+    tsseq.append(data[1])
+    cols = len(data)
+print "ts seq", tsseq
+print "total cols are ", cols
 
-def get_diff(tslines_n, pwlines_n, cols, tslines_s, pwlines_s):
+pwseq = []
+for data in pwdata:
+    #print data
+    pwseq.append(data[1])
+print "pw seq", pwseq
 
-    ln = 0
-    while (ln < tslines_n):
-        print "ts line seq ", tslines_s[ln][1]
-        ln += 1
+# let's get unique data from each list.
+uniqpw = filter(lambda x: x not in tsseq, pwseq)
+print "TabloScript is missing these seuqneces ", uniqpw
+
+uniqts = filter(lambda x: x not in pwseq, tsseq)
+print "PHI web is missing these seuqneces ", uniqts
 
 
+print "####  Missing records ####"
+for i in uniqpw:
+    print "Missing in TS", pwdata[pwdata['sequence']==i]
 
+for i in uniqts:
+    print "Missing in PHI", tsdata[tsdata['sequence']==i]
 
-(cols, tslines_n, pwlines_n) = get_line_col_counts(tsfile, pwfile)
-
-(tslines_s, pwlines_s) = sorted_data(tsfile, pwfile)
-
-print "ts lines are ", tslines_s
-
-get_diff(tslines_n, pwlines_n, cols, tslines_s, pwlines_s)
+n=1
+c=1
+while n <= max_raws:
+    if n in uniqts or n in uniqpw:
+        n+=1
+        continue
+    else:
+        tsrow = tsdata[tsdata['sequence']==n]
+        pwrow = pwdata[pwdata['sequence']==n]
+        print "*****Field mismatch for seq no ", n
+        for x in range(cols):
+            #print "ts value are ", tsrow[0][i]
+            if tsrow[0][x] != pwrow[0][x]:
+                print "TS : PHI ", tsrow[0][x], " : ", pwrow[0][x]
+    n+=1

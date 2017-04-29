@@ -1,4 +1,5 @@
 
+# *** WIP (work in progress) ***
 # get input.
 arr_i=[1,3,6,7,462,4,85,2,8,943,3,5,32,8,421,774,3,6,4235,3,6,4,35]
 
@@ -8,8 +9,6 @@ arr_i=[1,3,6,7,462,4,85,2,8,943,3,5,32,8,421,774,3,6,4235,3,6,4,35]
 # 3.  Get all values higher than pivot.
 
 
-lower=[]
-upper=[]
 def quicksort(ai):
     # if array input is < 1, return same value.
     if (len(ai) < 2):
@@ -31,4 +30,6 @@ def quicksort(ai):
     retlist=lower.extend(upper)
     return (quicksort(retlist)
 
-print(quicksort(arr_i))
+lower=[]
+upper=[]
+#print(quicksort(arr_i))

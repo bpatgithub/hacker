@@ -23,6 +23,7 @@ def fread(url_input):
 
 def link_traverse(b_obj, no_links, link_pos):
 
+    new_url=''
     # Traverse the links in the doc.
     #print b_obj
     tags = b_obj('a')
