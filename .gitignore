@@ -4,6 +4,11 @@ Notes
 Tools
 __private*
 .ipynb_checkpoints
+__secret
+*.csv
+*.gl
+Notes*
+WIP
 
 # Compiled source #
 ###################
