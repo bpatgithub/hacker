@@ -10,4 +10,4 @@ iphonedev:  Programs to develop an iPhone app for geo tracking of phone.<br><br>
 
 ## Authors
 
-* **bhavesh patel** - *Initial work*
+**bhavesh patel**
