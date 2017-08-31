@@ -1,0 +1,98 @@
+# FILENAME
+#	initchdev.ora
+# DESCRIPTION
+#	##SID database instance startup file
+# HISTORY
+#       9/1/98 Bhavesh Patel
+#
+db_name = ##SID
+#
+# Control Files.
+#
+control_files = (/ora01/##SID/dbfiles/ctl##SID.1.ctl,
+		 /ora01/##SID/dbfiles/ctl##SID.2.ctl,
+		 /ora01/##SID/dbfiles/ctl##SID.3.ctl)
+#
+# Trace files
+#
+background_dump_dest    = /opt/oracle/admin/##SID/bdump
+core_dump_dest		= /opt/oracle/admin/##SID/cdump
+user_dump_dest		= /opt/oracle/admin/##SID/udump
+max_dump_file_size = 10240
+#
+# Archive Log Parameters
+#
+log_archive_dest	= /ora61/##SID/dbfiles/a_
+log_archive_format 	= "log%s"
+log_archive_start	= TRUE
+log_checkpoint_interval = 100000
+log_checkpoint_timeout  = 1800
+log_buffer 		= 1048576
+#
+# Resource parameters.
+#
+db_files= 255
+	#dml_locks = 250 # Derived.  
+	#open_cursors=255
+open_cursors=500
+processes=100
+	#enqueue_resources=7500 # Derived. 
+serializable = false
+row_locking = always
+sort_area_size=1000000 
+#
+# Tuning parameters.
+partition_view_enabled=true
+pre_page_sga=true
+sort_area_size=2000000
+sort_area_retained_size=500000
+#
+# DB Buffer paramters.
+#
+db_file_multiblock_read_count = 16
+db_block_buffers = 4000
+db_block_size = 2048
+shared_pool_size = 50000000
+#---buffer_pool_keep = static
+#
+# DB Writers.
+#
+db_writer_processes = 1
+dbwr_io_slaves=4
+#---disk_async_io=false
+#
+# Rollback Segments.
+#
+rollback_segments=(r01,r02,r03,r04)
+#
+# Optimizer paramters.
+#
+optimizer_mode=rule
+	#timed_statistics=true
+	#sql_trace=true
+#
+# MTS.
+#
+	#mts_dispatchers="tcp,2"
+	#mts_max_dispatchers=20
+	#mts_servers=2
+	#mts_max_servers=20
+	#mts_service=urd1
+	#mts_listener_address="(ADDRESS=(PROTOCOL=tcp)(KEY=chdev))"
+	#mts_listener_address="(ADDRESS=(PROTOCOL=TCP)(HOST=promo)(PORT=1521))"
+#
+# License Parameters.
+#
+	#license_max_sessions = 80 
+#
+# Trace.
+#
+	#event = "10210 trace name context forever,level 10"
+	#event = "10211 trace name context forever,level 10"
+	#event = "10013 trace name context forever"
+	#event = "10015 trace name context forever"
+#
+# Compatible.
+#
+compatible=##VER
+job_queue_processes=1

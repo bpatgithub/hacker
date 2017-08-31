@@ -1,7 +1,7 @@
 import urllib
 import json
 import matplotlib.pyplot as plt
-from wordcloud import WordCloud
+#from wordcloud import WordCloud
 
 fhand = open("trump_clean_transcript.txt")
 '''
@@ -36,7 +36,6 @@ wcData = WordCloud().generate(data)
 plt.imshow(wcData)
 plt.axis("off")
 plt.show()
-'''
 # take relative word frequencies into account, lower max_font_size
 #wcData = WordCloud(background_color="white", max_words=50, max_font_size=40, random_state=42)
 wcData = WordCloud(max_font_size=40, relative_scaling=.5, max_words=100, random_state=3).generate(data)
@@ -44,3 +43,4 @@ plt.figure()
 plt.imshow(wcData)
 plt.axis("off")
 plt.show()
+'''
