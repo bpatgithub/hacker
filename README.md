@@ -1,6 +1,4 @@
-# Project Title
-
-<h2>My different coding hacks over time.</h2>
+# My different coding hacks over time
 
 machineLearning:  Machine learning and big data analytic programs.<br><br>
 python:  Different set of pyhton programs with algorithms, dataStructures and others.<br><br>
