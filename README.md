@@ -8,14 +8,6 @@ web:  web development programs using HTML, CSS, js, bootstrap etc.<br><br>
 DBAScripts:  All automated database creation/monitoring/backup scripts from Oracle days!<br><br>
 iphonedev:  Programs to develop an iPhone app for geo tracking of phone.<br><br>
 
-## Getting Started
-
-### Prerequisites
-
-### Installing
-
-## Built With
-
 ## Authors
 
 * **bhavesh patel** - *Initial work*
